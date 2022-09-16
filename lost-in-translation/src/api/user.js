@@ -1,7 +1,7 @@
 import { createHeaders } from "."
 const apiUrl = process.env.REACT_APP_API_URL
 
-const checkForUser = async () => {
+const checkForUser = async (username) => {
     try {
         const response = await fetch(`${apiUrl}?username=${username}`)
         if (!response.ok){
@@ -44,7 +44,7 @@ export const loginUser = async username => {
         return [checkError, null]
     }
 
-    if(user.length != 0){
+    if(user.length !== 0){
         return [ null, user.pop() ]
     }
 
