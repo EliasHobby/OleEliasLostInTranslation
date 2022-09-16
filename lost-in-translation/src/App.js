@@ -4,6 +4,9 @@ import {
   Routes,
   Route
 } from 'react-router-dom'
+import Login from './views/Login';
+import Profile from './views/Profile';
+import Translation from './views/Translation';
 
 function App() {
 
@@ -12,7 +15,9 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route/>
+          <Route path="/" element={ <Login/> }/>
+          <Route path="/translation" element={ <Translation/> }/>
+          <Route path="/profile" element={ <Profile/> }/>
         </Routes>
       </div>
     </BrowserRouter>
