@@ -13,11 +13,8 @@ const LoginForm = () => {
     } = useForm()
 
     const onSubmit = (data) => {
-        console.log(data)
         
     }
-    console.log(errors)
-
     const errorMessage = (() => {
         if (!errors.username){
             return null
