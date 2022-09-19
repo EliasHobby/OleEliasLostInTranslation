@@ -1,0 +1,1 @@
+export const imagePath = image => '/img/'+image+'.png'
