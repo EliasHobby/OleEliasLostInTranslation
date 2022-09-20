@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <div className="Navigation">
             <nav className="Navigation-container">
-                <h1 class="PageTitle">Lost In Translation</h1>
+                <h1 className="PageTitle">Lost In Translation</h1>
                 {user !== null && //only show if a user is logged in
                     <ul>
                         <li>
