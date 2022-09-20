@@ -47,7 +47,7 @@ export const loginUser = async username => {
     if(user.length !== 0){
         return [ null, user.pop() ]
     }
-
+    
     return await createUser(username)
 
 }
