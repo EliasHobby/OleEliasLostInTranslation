@@ -7,10 +7,6 @@ const Navbar = () => {
 
     return (
         <nav>
-            <ul>
-                <li>Translations</li>
-            </ul>
-
             { user !==null &&
             <ul> 
                 <li>

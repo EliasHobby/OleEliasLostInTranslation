@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {useForm} from 'react-hook-form'
-import {imagePath} from './imageMap.jsx'
+import {imagePath} from './imagePath.jsx'
 
 const translateConfig = {
     required:true
@@ -16,7 +16,8 @@ const TranslationForm = ({letter,image}) => {
 
     //Event handlers
     const onSubmit = ({ translate }) => {
-        setImages(translate.split(''))
+        const newString = translate.replace(/[^A-Z0-9]/ig, "");
+        setImages(newString.split(''))
     }
 
 
