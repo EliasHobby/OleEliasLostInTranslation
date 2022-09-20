@@ -4,6 +4,7 @@ import { STORAGE_KEY_USER } from "../../const/storageKeys"
 import { useUser } from "../../context/UserContext"
 import { storageDelete, storageSave } from "../../utils/storage"
 
+import {  } from "../../styles/Profile.css"
 
 
 //html for profile page
@@ -34,9 +35,8 @@ const ProfileActions = () => {
 
     return (
     <ul>
-        <li><Link to="/translation">Translation</Link></li>
-        <li><button onClick={handleClearHistory}>Clear History</button></li>
-        <li><button onClick={handleLogOut}>Log Out</button></li>
+        <li><button className="ClearHistoryButton" onClick={handleClearHistory}>Clear History</button></li>
+        <li><button className="LogoutButton" onClick={handleLogOut}>Log Out</button></li>
     </ul>
     )
 }

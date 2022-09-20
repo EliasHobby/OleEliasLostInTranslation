@@ -1,0 +1,61 @@
+.TranslationContainer {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    border-radius: 48px;
+    background-color: #DED9E2;
+    min-height: 600px;
+    
+}
+
+.TranslationOutput {
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+    background-color: #F8F8F8;
+    border-radius: 48px;
+}
+
+.TranslationInputContainer {
+    display: flex;
+    width: 93%;
+    align-self: stretch;
+    margin: 50px;
+}
+
+fieldset {
+    border-radius: 48px;
+    background-color: #F8F8F8;
+}
+
+input {
+    border: none;
+    background-color: #F8F8F8;
+    margin-right: 40px;
+    font-size: large;
+    padding: 10px;
+    min-width: 400px;
+}
+
+input:active {
+    outline-width: 0;
+}
+
+.SubmitInputButton {
+    border-radius: 50px;
+    border: none;
+    background-color: #80A1D4;
+    color: #f8f8f8;
+    padding: 8px;
+    width: auto;
+    height: auto;
+    font-size: medium;
+}
+
+.SubmitInputButton:hover {
+    opacity: 90%;
+    cursor: pointer;
+}
