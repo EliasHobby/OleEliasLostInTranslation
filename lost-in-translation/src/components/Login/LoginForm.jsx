@@ -6,11 +6,13 @@ import {useNavigate} from 'react-router-dom'
 import { useUser } from '../../context/UserContext'
 import { STORAGE_KEY_USER } from '../../const/storageKeys'
 
+//declaring rules for username input
 const usernameConfig = {
     required:true,
     minLength: 3
 }
 
+//Create html for login page
 const LoginForm = () => {
     //Hooks
     const { register, handleSubmit, formState: { errors } } = useForm()
@@ -37,7 +39,6 @@ const LoginForm = () => {
         }
         if(userResponse!= null){
             storageSave(STORAGE_KEY_USER, userResponse)
-            console.log(userResponse)
             setUser(userResponse)
         }
         setLoading(false)

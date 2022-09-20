@@ -6,7 +6,7 @@ import { storageDelete, storageSave } from "../../utils/storage"
 
 
 
-
+//html for profile page
 const ProfileActions = () => {
     const {user, setUser} = useUser()
 

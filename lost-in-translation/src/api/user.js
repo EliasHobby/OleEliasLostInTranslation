@@ -1,6 +1,8 @@
 import { createHeaders } from "."
 const apiUrl = process.env.REACT_APP_API_URL
 
+//Checks if user exist. 
+//Returns error or user data. [null, null] if no user exist
 const checkForUser = async (username) => {
     try {
         const response = await fetch(`${apiUrl}?username=${username}`)
@@ -8,21 +10,23 @@ const checkForUser = async (username) => {
             throw new Error('Could not complete request.')
         }
         const data = await response.json()
-        return [ null, data]
+        return [ null, data] //null,null if no user exist before
     }
     catch(error){
         return [ error.message, []]
     }
 }
 
+//Create user by username, and empty translation
+//Returns json response or error message
 export const createUser = async (username) => {
     try {
         const response = await fetch(apiUrl, {
-            method: 'POST',
+            method: 'POST', //Create a new record
             headers: createHeaders(),
             body: JSON.stringify({
                 username,
-                translations: []
+                translations: [] //generates
             })
         })
         if (!response.ok) {
@@ -36,9 +40,9 @@ export const createUser = async (username) => {
     }
 }
 
-
+//Takes in username and logs in either by getting existing user or by creating a new one
 export const loginUser = async username => {
-    const [checkError, user] = await checkForUser(username)
+    const [checkError, user] = await checkForUser(username) //user object or null decides if user exist
     
     if(checkError !== null){
         return [checkError, null]
@@ -46,12 +50,14 @@ export const loginUser = async username => {
     
 
     if(user.length !== 0){
-        return [ null, user.pop() ]
+        return [ null, user.pop() ] //return existing user
     }
-    return await createUser(username)
+    return await createUser(username) //return new user
 
 }
 
+//fetching a specific user to allow for sync between session storage and api
+//returns  error or user object
 export const userById = async (userId) => {
     try{
         const response = await fetch(`${apiUrl}/${userId}`)
