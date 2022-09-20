@@ -33,9 +33,6 @@ const TranslationForm = () => {
         storageSave(STORAGE_KEY_USER, updatedUser)
         setUser(updatedUser)
 
-        console.log('Error: ' + error)
-        console.log('Updated User: ' + updatedUser)
-
     }
 
 
