@@ -2,6 +2,7 @@ import { Link } from "react-router-dom"
 import { STORAGE_KEY_USER } from "../../const/storageKeys"
 import { useUser } from "../../context/UserContext"
 import { storageDelete } from "../../utils/storage"
+import {  } from "../../styles/Profile.css"
 
 
 
@@ -17,9 +18,8 @@ const ProfileActions = () => {
 
     return (
     <ul>
-        <li><Link to="/translation">Translation</Link></li>
-        <li><button>Clear History</button></li>
-        <li><button onClick={handleLogOut}>Log Out</button></li>
+        <li><button className="ClearHistoryButton">Clear History</button></li>
+        <li><button className="LogoutButton" onClick={handleLogOut}>Log Out</button></li>
     </ul>
     )
 }
