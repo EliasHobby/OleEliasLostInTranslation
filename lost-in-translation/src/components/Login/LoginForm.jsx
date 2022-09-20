@@ -37,6 +37,7 @@ const LoginForm = () => {
         }
         if(userResponse!= null){
             storageSave(STORAGE_KEY_USER, userResponse)
+            console.log(userResponse)
             setUser(userResponse)
         }
         setLoading(false)
