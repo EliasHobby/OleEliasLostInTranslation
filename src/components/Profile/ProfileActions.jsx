@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom"
 import { clearTranslationHistory } from "../../api/translation"
 import { STORAGE_KEY_USER } from "../../const/storageKeys"
 import { useUser } from "../../context/UserContext"
 import { storageDelete, storageSave } from "../../utils/storage"
-
 import {  } from "../../styles/Profile.css"
 
 
@@ -22,7 +20,7 @@ const ProfileActions = () => {
         if( !window.confirm('Are you sure?')){
             return
         }
-        const[clearError, clearResult] = await clearTranslationHistory(user)
+        await clearTranslationHistory(user)
 
         const updatedUser = {
             ...user,

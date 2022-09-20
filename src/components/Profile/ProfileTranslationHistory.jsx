@@ -3,7 +3,7 @@ import ProfileTranslationHistoryItem from "./ProfileTranslationHistoryItem"
 const ProfileTranslationHistory = ({translations}) => {
 
     //creates a list of translations array. taking only 10 elements 
-    const translationList = translations.slice(translations.length-10).map(
+    const translationList = translations.slice(Math.max(translations.length-10,0)).map(
         (translation, index) => <ProfileTranslationHistoryItem key={index+'-'+translation} translation={translation}/>)
 
     return (
