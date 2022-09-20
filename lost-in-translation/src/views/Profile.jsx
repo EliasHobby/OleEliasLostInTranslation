@@ -19,7 +19,7 @@ const Profile = () => {
             }
         }
 
-        //findUser()
+        findUser()
 
     },[setUser, user.id])
 
