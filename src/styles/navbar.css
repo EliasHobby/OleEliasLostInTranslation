@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+.Navigation {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #729B79;
+    color: #F8F8F8;
+    top: 0;
+}
+    .Navigation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 50px;
+    font-family: 'Quicksand', sans-serif;
+    }
+
+li {
+    display: inline;
+    padding: 15px;
+}
+
+a {
+    color: #F8F8F8;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #7ea785;
+    border-radius: 5px;
+}
+
+.PageTitle {
+    display:flex;
+}
