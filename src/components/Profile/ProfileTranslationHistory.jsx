@@ -3,7 +3,7 @@ import ProfileTranslationHistoryItem from "./ProfileTranslationHistoryItem"
 const ProfileTranslationHistory = ({translations}) => {
 
     //FIX ME: Should only display last 10!
-    const translationList = translations.map(
+    const translationList = translations.slice(translations.length-10).map(
         (translation, index) => <ProfileTranslationHistoryItem key={index+'-'+translation} translation={translation}/>)
 
     return (

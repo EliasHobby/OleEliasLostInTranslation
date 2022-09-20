@@ -15,9 +15,9 @@ const checkForUser = async (username) => {
     }
 }
 
-const createUser = async (username) => {
+export const createUser = async (username) => {
     try {
-        const response = fetch(apiUrl, {
+        const response = await fetch(apiUrl, {
             method: 'POST',
             headers: createHeaders(),
             body: JSON.stringify({
@@ -25,29 +25,29 @@ const createUser = async (username) => {
                 translations: []
             })
         })
-        if (!response.ok){
+        if (!response.ok) {
             throw new Error('Could not create user with username ' + username)
         }
         const data = await response.json()
-        return [ null, data]
+        return [ null, data ]
     }
-    catch(error){
-        return [ error.message, []]
+    catch (error) {
+        return [ error.message, [] ]
     }
-
 }
+
 
 export const loginUser = async username => {
     const [checkError, user] = await checkForUser(username)
-
+    
     if(checkError !== null){
         return [checkError, null]
     }
+    
 
     if(user.length !== 0){
         return [ null, user.pop() ]
     }
-
     return await createUser(username)
 
 }
