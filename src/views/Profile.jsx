@@ -8,27 +8,31 @@ import withAuth from "../HOC/withAuth"
 
 const Profile = () => {
 
-    const {user, setUser} = useUser()
+    const { user, setUser } = useUser()
 
     useEffect(() => {
 
         const findUser = async () => {
-            const [error,updatedUser] = await userById(user.id)
-            if(error ===null){
+            const [error, updatedUser] = await userById(user.id)
+            if (error === null) {
                 setUser(updatedUser)
             }
         }
 
-        //findUser()
+        findUser()
 
-    },[setUser, user.id])
+    }, [setUser, user.id])
 
     return (
         <>
             <h1>Profile</h1>
-            <ProfileHeader username={user.username}/>
-            <ProfileActions/>
-            <ProfileTranslationHistory translations={user.translations}/>
+            <div className="ProfileActions">
+                <ProfileHeader username={user.username} />
+                <ProfileActions />
+            </div>
+            <div className="ProfileContainer">
+                <ProfileTranslationHistory translations={user.translations} />
+            </div>
         </>
 
     )
