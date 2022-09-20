@@ -7,9 +7,10 @@ import { useUser } from "../context/UserContext"
 import withAuth from "../HOC/withAuth"
 
 const Profile = () => {
-
+    //Hooks
     const { user, setUser } = useUser()
-
+    
+    //Side effets
     useEffect(() => {
 
         const findUser = async () => {

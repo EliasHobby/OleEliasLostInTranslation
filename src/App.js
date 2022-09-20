@@ -9,6 +9,7 @@ import Profile from './views/Profile';
 import Translation from './views/Translation';
 import Navbar from './components/Navbar/Navbar';
 
+//React router dom paths decides which view to display
 function App() {
 
 
