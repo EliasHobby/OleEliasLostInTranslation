@@ -11,6 +11,7 @@ const translateConfig = {
     required: true
 }
 
+//Html for translation page 
 const TranslationForm = () => {
 
     //HOOKS

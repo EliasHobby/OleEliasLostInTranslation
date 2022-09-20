@@ -1,3 +1,4 @@
+//Saves value to session storage
 export const storageSave = (key, value) => {
     if(!key){
         throw new Error('No storage key provided')
@@ -7,9 +8,10 @@ export const storageSave = (key, value) => {
         throw new Error('No value provided')
     }
 
-    sessionStorage.setItem(key, JSON.stringify(value))
+    sessionStorage.setItem(key, JSON.stringify(value)) //stringify object
 }
 
+//Reads data in sessionstorage based on key
 export const storageRead = key => {
     const data = sessionStorage.getItem(key)
     if(data){
