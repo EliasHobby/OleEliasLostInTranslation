@@ -8,8 +8,7 @@ export const addTranslation = async (user, translation) => {
             method: 'PATCH',
             headers: createHeaders(),
             body: JSON.stringify({
-                username: user.username,
-                translations: [...user.translations,translation]
+                translations: [...user.translations , translation]
             })
         })
         if (!response.ok){
