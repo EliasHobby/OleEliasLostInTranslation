@@ -23,8 +23,8 @@ const TranslationForm = () => {
 
     //Event handlers
     const onSubmit = async ({ translate }) => {
-        const newString = translate.replace(/[^A-Z0-9]/ig, "");
-        setImages(newString.split(''))
+        const newString = translate.replace(/[^A-Z]/ig, "");
+        setImages(newString.toLowerCase().split(''))
 
         const [error, updatedUser] = await addTranslation(user, translate)
         if (error !== null) {
