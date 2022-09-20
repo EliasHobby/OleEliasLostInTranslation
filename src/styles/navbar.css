@@ -2,17 +2,21 @@
 
 .Navigation {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
     width: 100%;
-    top: 0;
+    justify-content: center;
     background-color: #729B79;
     color: #F8F8F8;
-    margin-bottom: auto;
+    top: 0;
+}
+    .Navigation-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
     height: 50px;
     font-family: 'Quicksand', sans-serif;
-}
+    }
 
 li {
     display: inline;
