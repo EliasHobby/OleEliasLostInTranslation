@@ -1,0 +1,48 @@
+.LogoutButton {
+    background-color: #80A1D4;
+    color: #f8f8f8;
+    border-radius: 10px;
+    border: none;
+    padding: 8px;
+    width: auto;
+    height: auto;
+    font-size: medium;
+}
+
+.LogoutButton:hover {
+    opacity: 90%;
+    cursor: pointer;
+}
+
+.ClearHistoryButton {
+    background-color: rgb(211, 123, 123);
+    color: #f8f8f8;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+    width: auto;
+    height: auto;
+    font-size: medium;
+}
+
+.ClearHistoryButton:hover {
+    opacity: 90%;
+    cursor: pointer;
+}
+
+.ProfileContainer {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: stretch;
+    border-radius: 48px;
+    background-color: #DED9E2;
+    min-height: 600px;
+    padding: 30px;
+}
+
+.ProfileActions {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
