@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-import { userById } from "../api/user"
 import ProfileActions from "../components/Profile/ProfileActions"
 import ProfileHeader from "../components/Profile/ProfileHeader"
 import ProfileTranslationHistory from "../components/Profile/ProfileTranslationHistory"
@@ -8,21 +6,7 @@ import withAuth from "../HOC/withAuth"
 
 const Profile = () => {
     //Hooks
-    const { user, setUser } = useUser()
-    
-    //Side effets
-    useEffect(() => {
-
-        const findUser = async () => {
-            const [error, updatedUser] = await userById(user.id)
-            if (error === null) {
-                setUser(updatedUser)
-            }
-        }
-
-        findUser()
-
-    }, [setUser, user.id])
+    const { user } = useUser()
 
     return (
         <>
