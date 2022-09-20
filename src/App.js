@@ -1,4 +1,4 @@
-import './App.css';
+import './styles/App.css';
 import {
   BrowserRouter,
   Routes,
@@ -14,14 +14,16 @@ function App() {
 
   return (
     <BrowserRouter>
+    <Navbar/>
+    <div className="App-container">
       <div className="App">
-        <Navbar/>
         <Routes>
           <Route path="/" element={ <Login/> }/>
           <Route path="/translation" element={ <Translation/> }/>
           <Route path="/profile" element={ <Profile/> }/>
         </Routes>
       </div>
+    </div>
     </BrowserRouter>
 
   );

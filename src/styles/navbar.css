@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+.Navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    background-color: #729B79;
+    color: #F8F8F8;
+    margin-bottom: auto;
+    height: 50px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+li {
+    display: inline;
+    padding: 15px;
+}
+
+a {
+    color: #F8F8F8;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #7ea785;
+    border-radius: 5px;
+}
+
+.PageTitle {
+    display:flex;
+}
